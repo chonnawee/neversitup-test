@@ -19,9 +19,9 @@ func (s *oddServiceImplement) groupInt(data []int) map[int]int {
 
 func (s *oddServiceImplement) FindIntInSlice(input []int) int {
 	group := s.groupInt(input)
-	for _, g := range group {
-		if g%2 != 0 {
-			return g
+	for k, n := range group {
+		if n%2 != 0 {
+			return k
 		}
 	}
 	return 0
