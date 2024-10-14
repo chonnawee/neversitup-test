@@ -17,7 +17,7 @@ func TestPermutations(t *testing.T) {
 		{name: "a", str: "a", expeced: []string{"a"}},
 		{name: "ab", str: "ab", expeced: []string{"ab", "ba"}},
 		{name: "abc", str: "abc", expeced: []string{"abc", "acb", "bac", "bca", "cab", "cba"}},
-		// {name: "aabb", str: "aabb", expeced: []string{"aabb", "abab", "abba", "baab", "baba", "bbaa"}},
+		{name: "aabb", str: "aabb", expeced: []string{"aabb", "abab", "abba", "baab", "baba", "bbaa"}},
 	}
 	service := permutations.NewPermutationsServiceImplement()
 	for _, c := range cases {
