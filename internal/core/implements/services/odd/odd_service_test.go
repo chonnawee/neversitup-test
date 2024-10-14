@@ -26,5 +26,4 @@ func TestFindOddInt(t *testing.T) {
 			assert.Equal(t, c.expeced, permutation)
 		})
 	}
-
 }
