@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN go mod init neversitup-test && go mod tidy
+RUN go get -d -v ./...
 
 EXPOSE 8080
 
