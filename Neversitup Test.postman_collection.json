@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "f448942a-4e5f-4f4f-80d3-fe0a37a37b12",
+		"name": "Neversitup Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4740838"
+	},
+	"item": [
+		{
+			"name": "Permutations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/permutation?alphabet=abc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"permutation"
+					],
+					"query": [
+						{
+							"key": "alphabet",
+							"value": "abc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindTheOddInt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/odd/find-int?numbers=1,2,2,3,3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"odd",
+						"find-int"
+					],
+					"query": [
+						{
+							"key": "numbers",
+							"value": "1,2,2,3,3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CountSmileys",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/counter/smileys?smileys=:),:[",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"counter",
+						"smileys"
+					],
+					"query": [
+						{
+							"key": "smileys",
+							"value": ":),:["
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
