@@ -61,7 +61,7 @@ docker-compose up -d
     - Contains the main entry points for the application.
 2. **internal/core/**:
     - The core logic of the application is split into:
-        - **implements/services/**: Contains implementations of the business logic for various services such as counter, odd, and permutations. Each service has its own subdirectory.
+        - **implements/services/**: Contains implementations of the business logic. Each service has its own subdirectory.
         - **interfaces/services/**: Contains the interfaces that define the contracts for these services, ensuring clear separation between implementation and definition.
 3. **tests/**:
     - Contains unit tests for each service implementation.
