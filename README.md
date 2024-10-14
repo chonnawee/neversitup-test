@@ -18,7 +18,7 @@
 
 ## Conventions
 
-1. **cmd/ Directory**:
+1. **cmd/**:
     - Contains the main entry points for the application.
 2. **internal/core/**:
     - The core logic of the application is split into:
@@ -27,3 +27,6 @@
 3. **tests/**:
     - Contains unit tests for each service implementation.
 
+## Naming Conventions
+ - Services: Each service has a specific folder and uses descriptive names, such as counter_service_implement.go for the implementation and counter_service_interface.go for the interface.
+ - Test Files: Test files follow the same naming pattern as their corresponding service implementations but with _test.go appended.    
