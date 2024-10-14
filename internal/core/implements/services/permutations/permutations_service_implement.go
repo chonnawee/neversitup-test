@@ -11,6 +11,15 @@ func NewPermutationsServiceImplement() services_interfaces.PermutationsServiceIn
 	return &permutationsServiceImplement{}
 }
 
+func (s *permutationsServiceImplement) checkExist(slice []string, target string) bool {
+	for _, item := range slice {
+		if item == target {
+			return true
+		}
+	}
+	return false
+}
+
 func (s *permutationsServiceImplement) Generate(input string) []string {
 	if len(input) == 1 {
 		return []string{input}
@@ -20,7 +29,15 @@ func (s *permutationsServiceImplement) Generate(input string) []string {
 		remaining := input[:i] + input[i+1:]
 		subPermutations := s.Generate(remaining)
 		for _, sub := range subPermutations {
-			permutations = append(permutations, string(ip)+sub)
+			newString := string(ip) + sub
+			if newString == input {
+				if s.checkExist(permutations, input) {
+					continue
+				}
+			}
+			if !s.checkExist(permutations, newString) {
+				permutations = append(permutations, newString)
+			}
 		}
 	}
 	return permutations
