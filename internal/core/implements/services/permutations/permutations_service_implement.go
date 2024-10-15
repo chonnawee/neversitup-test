@@ -30,11 +30,6 @@ func (s *permutationsServiceImplement) Generate(input string) []string {
 		subPermutations := s.Generate(remaining)
 		for _, sub := range subPermutations {
 			newString := string(ip) + sub
-			if newString == input {
-				if s.checkExist(permutations, input) {
-					continue
-				}
-			}
 			if !s.checkExist(permutations, newString) {
 				permutations = append(permutations, newString)
 			}
